@@ -25,7 +25,6 @@ else:
 TRY = 
 ssh = subprocess.Popen(["ssh", "-l", USER, "-t", "%s" % HOST, "%s" % TRY], shell=False, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 result = ssh.stdout.check_output()
-if result == "carter@153.82.36.202's password:":
 	ssh.stdin.communicate(PW)
 #login = ssh.stdin.communicate(str(PW))
 
