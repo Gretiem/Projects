@@ -13,7 +13,9 @@ screen.keypad(1)          # Capture input from keypad
 
 
 # Change this to use different colors when highlighting
-curses.init_pair(1,curses.COLOR_BLACK, curses.COLOR_WHITE) # Sets up color pair #1, it does black text with white background
+curses.init_pair(1,curses.COLOR_BLACK, curses.COLOR_YELLOW) # Sets up color pair #1, it does black text with white background
+#curses.init_pair(1,curses.COLOR_BLACK, curses.COLOR_WHITE) # Sets up color pair #1, it does black text with white background
+
 h = curses.color_pair(1) #h is the coloring for a highlighted menu option
 n = curses.A_NORMAL #n is the coloring for a non highlighted menu option
 
@@ -24,21 +26,28 @@ EXITMENU = "exitmenu"
 menu_data = {
     'title': "Tool Box", 'type': MENU, 'subtitle': "Please select an option...",
     'options':[
-        { 'title': "Whole Site", 'type': MENU, 'subtitle': "Please select an option...",
+        { 'title': "Store", 'type': MENU, 'subtitle': "Please select an option...",
                  'options': [
-                 { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
+                 { 'title': "List of Routers and Switches", 'type': COMMAND, 'command': 'path or command' },
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
                             ]
         },
         { 'title': "Router", 'type': MENU, 'subtitle': "Please select an option...",
                  'options': [
-                 { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
+                 { 'title': "Sh ip int br", 'type': COMMAND, 'command': 'path or command' },
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
                             ]
         },
         { 'title': "Switch", 'type': MENU, 'subtitle': "Please select an option...",
+                 'options': [
+                 { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
+                 { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
+                 { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
+                            ]
+        },
+        { 'title': "End Device", 'type': MENU, 'subtitle': "Please select an option...",
                  'options': [
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
                  { 'title': "Name", 'type': COMMAND, 'command': 'path or command' },
